@@ -1,0 +1,50 @@
+﻿<Window x:Class="Login.Error"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="Error" Height="180" Width="400"
+        WindowStyle="None" AllowsTransparency="True"
+        MouseDown="MainWindow_OnMouseDown"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+
+        </Grid.RowDefinitions>
+        <Border CornerRadius="20" Grid.RowSpan="2" >
+            <Border.Background >
+                <LinearGradientBrush>
+                    <GradientStop Color="#F544E5" Offset="0.0"/>
+                    <GradientStop Color="#73F5CF" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            
+            
+
+
+        </Border>
+        <StackPanel Orientation="Vertical">
+            <Button Content="Leave" BorderBrush="White" FontSize="20" Background="Transparent" Click="CloseButton_Click" HorizontalAlignment="Center" Height="30" Width="150"
+                    Margin="0 100 200 0"  BorderThickness="0.5">
+
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <Button Content="Go back" FontSize="20" BorderBrush="White" Background="Transparent"  HorizontalAlignment="Center" Height="30" Width="150"
+                    Margin="200 100 0 0" BorderThickness="0.5" Click="Button_Click">
+                
+
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+
+            <Viewbox StretchDirection="Both" Stretch="Uniform"  Height="30" Width="350" Margin="0 50 0 0">
+                <ContentControl Content="You have entered an invalid username or password" Foreground="#F5F99C"/>
+            </Viewbox>
+        </StackPanel>
+    </Grid>
+</Window>

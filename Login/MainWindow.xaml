@@ -1,0 +1,98 @@
+﻿<Window x:Class="Login.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Login"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="380"
+       AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="MainWindow_OnMouseDown">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                       
+                        <GradientStop Color="#F544E5" Offset="0.0"/>
+                        <GradientStop Color="#73F5CF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                
+            </Border>
+            <StackPanel VerticalAlignment="Center">
+                <Image Source="ARU.png" Width="150" Margin="0 10 0 0"/>
+                <TextBlock Text="AReview" FontSize="25" FontWeight="Light" Foreground="White"
+                           HorizontalAlignment="Center" FontFamily="Ubuntu Mono"/>
+            </StackPanel>
+            <StackPanel  Grid.Row="1">
+                <StackPanel Orientation="Horizontal" >
+                    <TextBox  Name="username" FontFamily="Helvetica" FontWeight="Light" 
+                         Text="Username" FontSize="20"
+                         HorizontalAlignment="Left"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Center"
+                         Opacity="0.5"
+                         Height="25"
+                              Margin="0 10 0 0" GotFocus="textBox_1_Enter" LostFocus="textBox__Enter"/>
+                    
+
+                    <Image Source="toppng.com-app-icon-set-login-icon-comments-avatar-icon-980x980.png" 
+                       Width="30" Height="30" Margin="40 0 0 5" Opacity="0.5" />
+                    
+                </StackPanel>
+                <Border Width="250" Height="2" Background="White" Opacity="0.5"/>
+            </StackPanel>
+            
+            <StackPanel  Grid.Row="1">
+                <StackPanel Orientation="Horizontal" >
+                    <PasswordBox x:Name="pwBox" FontFamily="Helvetica" FontWeight="Light"
+                         Password="Password" FontSize="20"
+                         HorizontalAlignment="Left"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Center"
+                         Opacity="0.5"
+                         Height="25"
+                              Margin="0 60 0 0"
+                                 GotFocus="PWBox_1_Enter"
+                                 LostFocus=" PWWBox__Enter"/>
+
+                    <Image Source="pngkit_login-icon-png_8414991.png" 
+                       Width="30" Height="30" Margin="40 60 0 5" Opacity="0.5" />
+                 
+                    
+                </StackPanel>
+                <Border Width="250" Height="2" Background="White" Opacity="0.5"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="Login" Content="Login" Width="100" Height="40" Margin="20 30 0 0" Click="Login_Click">
+
+                    </Button>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="CloseButton" Content="Leave" Width="100" Height="40" Margin="250 -40 0 0" Click="CloseButton_Click">
+
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+
+          
+
+
+        </Grid>
+        
+        
+    </Grid>
+    
+</Window>
